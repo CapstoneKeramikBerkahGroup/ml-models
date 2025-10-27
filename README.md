@@ -1,152 +1,152 @@
-# ML Models - Academic Reference Management System
+# ML Models - Sistem Manajemen Referensi Akademik
 
-Machine learning models and research notebooks for NLP-powered document analysis.
+Model machine learning dan notebook penelitian untuk analisis dokumen berbasis NLP.
 
-## 📊 Overview
+## 📊 Gambaran Umum
 
-This repository contains the machine learning research, experiments, and models used in the Academic Reference Management System for:
-- **Document Similarity Analysis** - Using Sentence Transformers
-- **Keyword Extraction** - Using KeyBERT
-- **Text Summarization** - Using BART
-- **Reference Extraction** - Using custom NLP patterns
+Repository ini berisi penelitian machine learning, eksperimen, dan model yang digunakan dalam Sistem Manajemen Referensi Akademik untuk:
+- **Analisis Kemiripan Dokumen** - Menggunakan Sentence Transformers
+- **Ekstraksi Kata Kunci** - Menggunakan KeyBERT
+- **Peringkasan Teks** - Menggunakan BART
+- **Ekstraksi Referensi** - Menggunakan pola NLP kustom
 
-## 🗂️ Repository Structure
+## 🗂️ Struktur Repository
 
 ```
 ml-models/
-├── notebooks/              # Jupyter notebooks for experiments
+├── notebooks/              # Jupyter notebook untuk eksperimen
 │   ├── keyword_extraction.ipynb
 │   ├── summarization.ipynb
 │   ├── similarity_analysis.ipynb
 │   └── reference_extraction.ipynb
-├── data/                   # Sample data for testing
-│   └── sample_papers/      # Sample academic papers (PDF)
-├── models/                 # Trained/fine-tuned models
+├── data/                   # Data sampel untuk pengujian
+│   └── sample_papers/      # Paper akademik sampel (PDF)
+├── models/                 # Model yang sudah dilatih/fine-tuned
 │   └── .gitkeep
-├── scripts/                # Python scripts for model training
+├── scripts/                # Script Python untuk pelatihan model
 │   └── .gitkeep
-├── results/                # Experiment results and outputs
+├── results/                # Hasil eksperimen dan output
 │   └── .gitkeep
-├── requirements.txt        # Python dependencies
+├── requirements.txt        # Dependensi Python
 └── README.md
 ```
 
-## 🔬 Models Used
+## 🔬 Model yang Digunakan
 
-### 1. **Keyword Extraction** (KeyBERT)
+### 1. **Ekstraksi Kata Kunci** (KeyBERT)
 - **Model**: `all-MiniLM-L6-v2`
-- **Purpose**: Extract top keywords from documents
-- **Method**: BERT embeddings + MaxSum similarity
+- **Tujuan**: Mengekstrak kata kunci utama dari dokumen
+- **Metode**: BERT embeddings + MaxSum similarity
 
-### 2. **Text Summarization** (BART)
+### 2. **Peringkasan Teks** (BART)
 - **Model**: `facebook/bart-large-cnn`
-- **Purpose**: Generate document summaries
-- **Method**: Abstractive summarization
+- **Tujuan**: Menghasilkan ringkasan dokumen
+- **Metode**: Peringkasan abstraktif
 
-### 3. **Document Similarity** (Sentence Transformers)
+### 3. **Kemiripan Dokumen** (Sentence Transformers)
 - **Model**: `all-MiniLM-L6-v2`
-- **Purpose**: Compute semantic similarity between documents
-- **Method**: Cosine similarity of sentence embeddings
+- **Tujuan**: Menghitung kemiripan semantik antar dokumen
+- **Metode**: Cosine similarity dari sentence embeddings
 
-### 4. **Reference Extraction** (Custom NLP)
-- **Method**: Pattern matching with regex
-- **Strategies**: Bracket notation, numbered lists, Harvard style
+### 4. **Ekstraksi Referensi** (NLP Kustom)
+- **Metode**: Pattern matching dengan regex
+- **Strategi**: Notasi kurung, daftar bernomor, gaya Harvard
 
-## 🚀 Quick Start
+## 🚀 Panduan Memulai
 
-### Installation
+### Instalasi
 
 ```bash
-# Create virtual environment
+# Buat virtual environment
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate  # Windows: venv\Scripts\activate
 
-# Install dependencies
+# Install dependensi
 pip install -r requirements.txt
 ```
 
-### Running Notebooks
+### Menjalankan Notebook
 
 ```bash
-# Start Jupyter
+# Jalankan Jupyter
 jupyter notebook
 
-# Or use Google Colab (recommended for GPU access)
-# Upload notebooks to Google Drive and open with Colab
+# Atau gunakan Google Colab (direkomendasikan untuk akses GPU)
+# Upload notebook ke Google Drive dan buka dengan Colab
 ```
 
-## 📓 Notebooks
+## 📓 Daftar Notebook
 
-### 1. Keyword Extraction
+### 1. Ekstraksi Kata Kunci
 - **File**: `notebooks/keyword_extraction.ipynb`
-- **Description**: Experiments with KeyBERT for keyword extraction
-- **Output**: Top N keywords with confidence scores
+- **Deskripsi**: Eksperimen dengan KeyBERT untuk ekstraksi kata kunci
+- **Output**: Top N kata kunci dengan skor confidence
 
-### 2. Document Summarization
+### 2. Peringkasan Dokumen
 - **File**: `notebooks/summarization.ipynb`
-- **Description**: Text summarization using BART
-- **Output**: Concise summaries of academic papers
+- **Deskripsi**: Peringkasan teks menggunakan BART
+- **Output**: Ringkasan singkat dari paper akademik
 
-### 3. Similarity Analysis
+### 3. Analisis Kemiripan
 - **File**: `notebooks/similarity_analysis.ipynb`
-- **Description**: Document similarity computation
-- **Output**: Similarity matrix and visualization
+- **Deskripsi**: Komputasi kemiripan dokumen
+- **Output**: Matriks kemiripan dan visualisasi
 
-### 4. Reference Extraction
+### 4. Ekstraksi Referensi
 - **File**: `notebooks/reference_extraction.ipynb`
-- **Description**: Extract references from academic papers
-- **Output**: Structured list of references
+- **Deskripsi**: Ekstraksi referensi dari paper akademik
+- **Output**: Daftar referensi terstruktur
 
-## 🔧 Model Integration
+## 🔧 Integrasi Model
 
-These models are integrated into the backend API:
+Model-model ini diintegrasikan ke dalam API backend:
 - **Repository**: [reference-backend](https://github.com/CapstoneKeramikBerkahGroup/reference-backend)
-- **Implementation**: `app/services/nlp_service.py`
-- **Custom Functions**: `app/services/custom_nlp.py`
+- **Implementasi**: `app/services/nlp_service.py`
+- **Fungsi Custom**: `app/services/custom_nlp.py`
 
-## 📊 Performance Metrics
+## 📊 Metrik Performa
 
-| Task | Model | Accuracy/F1 | Speed |
-|------|-------|-------------|-------|
-| Keyword Extraction | KeyBERT | N/A | ~0.5s/doc |
-| Summarization | BART | N/A | ~2s/doc |
-| Similarity | SentenceTransformer | N/A | ~0.3s/doc |
-| Reference Extraction | Custom NLP | ~85% | ~0.2s/doc |
+| Task | Model | Accuracy/F1 | Kecepatan |
+|------|-------|-------------|-----------|
+| Ekstraksi Kata Kunci | KeyBERT | N/A | ~0.5s/doc |
+| Peringkasan | BART | N/A | ~2s/doc |
+| Kemiripan | SentenceTransformer | N/A | ~0.3s/doc |
+| Ekstraksi Referensi | Custom NLP | ~85% | ~0.2s/doc |
 
-## 🧪 Experiments
+## 🧪 Eksperimen
 
-Document your experiments in the notebooks:
-1. Model selection and comparison
-2. Hyperparameter tuning
-3. Performance benchmarking
-4. Error analysis
+Dokumentasikan eksperimen Anda di notebook:
+1. Pemilihan dan perbandingan model
+2. Tuning hyperparameter
+3. Benchmarking performa
+4. Analisis error
 
-## 📦 Dependencies
+## 📦 Dependensi
 
-Main packages (see `requirements.txt` for full list):
+Paket utama (lihat `requirements.txt` untuk daftar lengkap):
 - `transformers` - Hugging Face transformers
-- `sentence-transformers` - Sentence embeddings
-- `keybert` - Keyword extraction
+- `sentence-transformers` - Embedding kalimat
+- `keybert` - Ekstraksi kata kunci
 - `torch` - PyTorch backend
-- `pdfplumber` - PDF text extraction
-- `scikit-learn` - ML utilities
+- `pdfplumber` - Ekstraksi teks PDF
+- `scikit-learn` - Utilitas ML
 
-## 👥 Team
+## 👥 Tim
 
-- **ML Engineer**: [Team Member Name] - Model research and development
-- **NLP Engineer**: [Team Member Name] - NLP pipeline and integration
-- **Full-Stack Developer**: [Team Member Name] - Backend integration
+- **ML Engineer**: [Nama Anggota Tim] - Riset dan pengembangan model
+- **NLP Engineer**: [Nama Anggota Tim] - Pipeline NLP dan integrasi
+- **Full-Stack Developer**: [Nama Anggota Tim] - Integrasi backend
 
-## 📝 License
+## 📝 Lisensi
 
-This project is part of an academic capstone project.
+Proyek ini merupakan bagian dari proyek capstone akademik.
 
-## 🔗 Related Repositories
+## 🔗 Repository Terkait
 
-- [Frontend](https://github.com/CapstoneKeramikBerkahGroup/reference-frontend) - React web interface
+- [Frontend](https://github.com/CapstoneKeramikBerkahGroup/reference-frontend) - Interface web React
 - [Backend](https://github.com/CapstoneKeramikBerkahGroup/reference-backend) - FastAPI backend
-- [Deployment](https://github.com/CapstoneKeramikBerkahGroup/reference-deployment) - Docker configs (optional)
+- [Deployment](https://github.com/CapstoneKeramikBerkahGroup/reference-deployment) - Konfigurasi Docker (opsional)
 
-## 📧 Contact
+## 📧 Kontak
 
-For questions about the ML models, contact [your-email@example.com]
+Untuk pertanyaan tentang model ML, hubungi [email-anda@example.com]
