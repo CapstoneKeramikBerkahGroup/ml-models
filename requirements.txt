@@ -1,0 +1,35 @@
+# Core ML Libraries
+torch==2.1.0
+transformers==4.35.0
+sentence-transformers==2.2.2
+keybert==0.8.3
+
+# NLP Processing
+spacy==3.7.2
+nltk==3.8.1
+
+# PDF Processing
+pdfplumber==0.10.3
+PyPDF2==3.0.1
+
+# Data Processing
+pandas==2.1.3
+numpy==1.24.3
+scikit-learn==1.3.2
+
+# Visualization
+matplotlib==3.8.2
+seaborn==0.13.0
+plotly==5.18.0
+
+# Jupyter
+jupyter==1.0.0
+ipykernel==6.27.1
+notebook==7.0.6
+
+# Utilities
+tqdm==4.66.1
+python-dotenv==1.0.0
+
+# Optional: For GPU acceleration
+# accelerate==0.25.0

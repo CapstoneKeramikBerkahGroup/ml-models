@@ -1,0 +1,67 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data files (don't commit large datasets)
+data/*.pdf
+data/*.csv
+data/*.json
+!data/sample_papers/.gitkeep
+
+# Model files (too large for git)
+models/*.bin
+models/*.pt
+models/*.pth
+models/*.h5
+models/*.pkl
+!models/.gitkeep
+
+# Results
+results/*.png
+results/*.jpg
+results/*.json
+results/*.csv
+!results/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Cache
+.cache/
+*.cache
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment variables
+.env
+.env.local
+
+# Logs
+*.log
+logs/
+
+# Google Colab
+*.ipynb~
