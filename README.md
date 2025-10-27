@@ -131,11 +131,6 @@ Paket utama (lihat `requirements.txt` untuk daftar lengkap):
 - `pdfplumber` - Ekstraksi teks PDF
 - `scikit-learn` - Utilitas ML
 
-## 👥 Tim
-
-- **ML Engineer**: [Nama Anggota Tim] - Riset dan pengembangan model
-- **NLP Engineer**: [Nama Anggota Tim] - Pipeline NLP dan integrasi
-- **Full-Stack Developer**: [Nama Anggota Tim] - Integrasi backend
 
 ## 📝 Lisensi
 
@@ -147,6 +142,4 @@ Proyek ini merupakan bagian dari proyek capstone akademik.
 - [Backend](https://github.com/CapstoneKeramikBerkahGroup/reference-backend) - FastAPI backend
 - [Deployment](https://github.com/CapstoneKeramikBerkahGroup/reference-deployment) - Konfigurasi Docker (opsional)
 
-## 📧 Kontak
 
-Untuk pertanyaan tentang model ML, hubungi [email-anda@example.com]
